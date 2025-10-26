@@ -85,13 +85,17 @@ const SignIn = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="border-0 bg-transparent p-0 focus-visible:ring-0 placeholder:text-muted-foreground flex-1"
+                  data-form-type="other"
+                  autoComplete="current-password"
                   required
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="text-foreground hover:text-primary transition-colors"
+                  className="text-foreground hover:text-primary transition-colors p-1"
+                  aria-label={showPassword ? "Hide password" : "Show password"}
                 >
+                  {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                 </button>
               </div>
             </div>

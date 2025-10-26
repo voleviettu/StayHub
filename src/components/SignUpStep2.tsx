@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Logo from "@/assets/logo.png";
@@ -21,6 +23,8 @@ const SignUpStep2 = ({
   onBack,
 }: SignUpStep2Props) => {
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   return (
     <div className="glass rounded-3xl p-8 md:p-12 max-w-2xl w-full animate-scale-in">
@@ -49,13 +53,23 @@ const SignUpStep2 = ({
           <div className="flex items-center gap-3 bg-background/50 rounded-xl px-4 py-3">
             <Input
               id="password"
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Enter your password"
               value={password}
               onChange={(e) => onPasswordChange(e.target.value)}
-              className="border-0 bg-transparent p-0 focus-visible:ring-0 placeholder:text-muted-foreground"
+              className="border-0 bg-transparent p-0 focus-visible:ring-0 placeholder:text-muted-foreground flex-1"
+              data-form-type="other"
+              autoComplete="new-password"
               required
             />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="text-foreground hover:text-primary transition-colors p-1"
+              aria-label={showPassword ? "Hide password" : "Show password"}
+            >
+              {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+            </button>
           </div>
         </div>
 
@@ -67,13 +81,23 @@ const SignUpStep2 = ({
           <div className="flex items-center gap-3 bg-background/50 rounded-xl px-4 py-3">
             <Input
               id="confirmPassword"
-              type="password"
+              type={showConfirmPassword ? "text" : "password"}
               placeholder="Confirm your password"
               value={confirmPassword}
               onChange={(e) => onConfirmPasswordChange(e.target.value)}
-              className="border-0 bg-transparent p-0 focus-visible:ring-0 placeholder:text-muted-foreground"
+              className="border-0 bg-transparent p-0 focus-visible:ring-0 placeholder:text-muted-foreground flex-1"
+              data-form-type="other"
+              autoComplete="new-password"
               required
             />
+            <button
+              type="button"
+              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              className="text-foreground hover:text-primary transition-colors p-1"
+              aria-label={showConfirmPassword ? "Hide password" : "Show password"}
+            >
+              {showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+            </button>
           </div>
         </div>
 
