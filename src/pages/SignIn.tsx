@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import heroBackground from "@/assets/signin-background.jpg";
+import heroBackground from "@/assets/image/background/signin-background.jpg";
 import Logo from "@/assets/logo.png";
 
 const SignIn = () => {

@@ -13,7 +13,10 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <div 
+            className="flex items-center gap-2 cursor-pointer hover:opacity-90 transition-opacity"
+            onClick={() => navigate('/')}
+          >
             <img src={Logo} alt="StayHub logo" className="h-8 w-8 object-contain" />
             <span className="text-xl font-semibold text-white">StayHub</span>
           </div>

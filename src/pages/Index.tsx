@@ -3,17 +3,17 @@ import Navbar from "@/components/Navbar";
 import SearchBar from "@/components/SearchBar";
 import HomestayCard from "@/components/HomestayCard";
 import ReviewCard from "@/components/ReviewCard";
-import heroBackground from "@/assets/hero-background.jpg";
-import featureBackground from "@/assets/feature-background.jpg";
-import reviewBackground from "@/assets/review-background.jpg";
-import homestay1 from "@/assets/homestay-1.jpg";
-import homestay2 from "@/assets/homestay-2.jpg";
-import homestay3 from "@/assets/homestay-3.jpg";
+import heroBackground from "@/assets/image/background/hero-background.jpg";
+import featureBackground from "@/assets/image/background/feature-background.jpg";
+import reviewBackground from "@/assets/image/background/review-background.jpg";
+import homestay1 from "@/assets/image/mock/homestay-1.jpg";
+import homestay2 from "@/assets/image/mock/homestay-2.jpg";
+import homestay3 from "@/assets/image/mock/homestay-3.jpg";
 
 const Index = () => {
   const homestays = [
     {
-      id: 1,
+      id: "1",
       image: homestay1,
       title: "Cozy Mountain Retreat",
       location: "Rocky Mountains, Colorado",
@@ -22,7 +22,7 @@ const Index = () => {
       price: 149,
     },
     {
-      id: 2,
+      id: "2",
       image: homestay2,
       title: "Sunset Valley Home",
       location: "Napa Valley, California",
@@ -31,7 +31,7 @@ const Index = () => {
       price: 189,
     },
     {
-      id: 3,
+      id: "3",
       image: homestay3,
       title: "Rustic Countryside Stay",
       location: "Vermont Highlands",

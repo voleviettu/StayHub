@@ -1,5 +1,5 @@
 import { useState } from "react";
-import signupBackground from "@/assets/siginup-background.jpg";
+import signupBackground from "@/assets/image/background/siginup-background.jpg";
 import SignUpStep1 from "@/components/SignUpStep1";
 import SignUpStep2 from "@/components/SignUpStep2";
 import SignUpStep3 from "@/components/SignUpStep3";
